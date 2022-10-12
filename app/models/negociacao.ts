@@ -4,7 +4,8 @@ export default class Negociacao {
 	) {}
 
 	get data() {
-		return this._data;
+		const data = new Date(this._data.getTime())
+		return data;
 	}
 
 	get quantidade() {

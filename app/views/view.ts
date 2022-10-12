@@ -1,4 +1,4 @@
-export class View<T> {
+export abstract class View<T> {
 	protected element: HTMLElement;
 
 	constructor(seletor: string) {
@@ -10,7 +10,5 @@ export class View<T> {
 		this.element.innerHTML = template;
 	}
 
-	template(model: T):string {
-		throw Error('É necessário reescrever template para gerar um HTMLElement')
-	}
+	abstract template(model: T):string;
 }
